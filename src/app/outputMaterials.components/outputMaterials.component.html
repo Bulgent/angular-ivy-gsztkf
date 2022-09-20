@@ -1,0 +1,38 @@
+<div class="box">
+  <h2>After Dilution</h2>
+  <div class="flatArrangement">
+    <div class="smallboxL">
+      <div class="boldFont">What you want to make</div>
+      <div class="flatArrangement_small">
+        <input
+          type="number"
+          id="outputMaterialsPpm"
+          (keyup)="onKey_outputMaterialsPpm($event)"
+        />
+        <div>ppm</div>
+      </div>
+      <div class="flatArrangement_small">
+        <input
+          type="number"
+          id="outputMaterialsVolume"
+          (keyup)="onKey_outputMaterialsVolume($event)"
+        />
+        <div>mL</div>
+      </div>
+    </div>
+    <div class="text-divider"></div>
+    <div class="smallboxR">
+      <div class="boldFont">Ingredients</div>
+      <div class="answer">
+        <div class="boldFont">Water</div>
+
+        <div>{{ waterVolume }}mL</div>
+      </div>
+      <div class="answer">
+        <div class="boldFont">Original Material{{ originalMaterialsPpm }}</div>
+
+        <div>{{ originalVolume }}mL</div>
+      </div>
+    </div>
+  </div>
+</div>

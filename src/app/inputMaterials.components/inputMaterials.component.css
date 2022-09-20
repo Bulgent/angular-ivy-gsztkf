@@ -1,0 +1,21 @@
+.flatArrangement {
+  display: flex;
+  align-items: flex-end;
+}
+
+#inputMaterialsPpm {
+  width: 10vmin;
+  height: 8vmin;
+  font-size: larger;
+}
+
+.box {
+  background-color: #a5d8f3;
+  padding-left: 10vmin;
+  padding-right: 10vmin;
+  padding-bottom: 7vmin;
+  padding-top: 0.5vmin;
+  border-radius: 3%;
+  width: 40vw;
+  color: black;
+}

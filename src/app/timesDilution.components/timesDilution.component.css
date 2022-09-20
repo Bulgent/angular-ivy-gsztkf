@@ -1,0 +1,29 @@
+#arrow {
+  left: 7vw;
+  box-sizing: border-box;
+  width: 7vw;
+  height: 7vw;
+  border: 7vw solid transparent;
+  border-left: 7vw solid rgb(241, 255, 208);
+  transform: rotate(90deg);
+}
+
+.arrows {
+  display: flex;
+  margin-top: 7vw;
+}
+
+#diluteButton {
+  width: 20vw;
+  height: 7vw;
+  margin-left: 2vw;
+  font-size: large;
+  font-weight: bold;
+  border-radius: 5%;
+  text-align: center;
+}
+
+.empty {
+  width: 20vw;
+  height: 7vw;
+}
