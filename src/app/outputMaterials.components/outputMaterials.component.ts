@@ -72,11 +72,10 @@ export class OutputMaterials implements OnInit, OnDestroy {
       100000;
 
     waterVolume =
-      Number(outputMaterialsVolume) *
-      (1 -
-        (Number(outputMaterialsPpm) * 100000) /
-          Number(inputMaterialsPpm) /
-          100000);
+      (Number(outputMaterialsVolume) *
+        (100000 -
+          (Number(outputMaterialsPpm) * 100000) / Number(inputMaterialsPpm))) /
+      100000;
 
     this.commonService.onNotifySharedDataChanged_originalVolume(
       String(originalVolume)
