@@ -67,15 +67,17 @@ export class OutputMaterials implements OnInit, OnDestroy {
     let originalVolume: Number;
 
     originalVolume =
-      (((Number(outputMaterialsPpm) * 100000) / Number(inputMaterialsPpm)) *
-        Number(outputMaterialsVolume)) /
-      100000;
+      Math.floor(
+        ((Number(outputMaterialsPpm) * 100000) / Number(inputMaterialsPpm)) *
+          Number(outputMaterialsVolume)
+      ) / 100000;
 
     waterVolume =
-      (Number(outputMaterialsVolume) *
-        (100000 -
-          (Number(outputMaterialsPpm) * 100000) / Number(inputMaterialsPpm))) /
-      100000;
+      Math.floor(
+        Number(outputMaterialsVolume) *
+          (100000 -
+            (Number(outputMaterialsPpm) * 100000) / Number(inputMaterialsPpm))
+      ) / 100000;
 
     this.commonService.onNotifySharedDataChanged_originalVolume(
       String(originalVolume)
