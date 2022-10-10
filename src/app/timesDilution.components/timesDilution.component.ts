@@ -18,11 +18,16 @@ export class TimesDilution {
     let originalVolume: Number;
 
     originalVolume =
-      (Number(outputMaterialsPpm) / Number(inputMaterialsPpm)) *
+      ((Number(outputMaterialsPpm) * 100000) /
+        Number(inputMaterialsPpm) /
+        100000) *
       Number(outputMaterialsVolume);
     waterVolume =
       Number(outputMaterialsVolume) *
-      (1 - Number(outputMaterialsPpm) / Number(inputMaterialsPpm));
+      (1 -
+        (Number(outputMaterialsPpm) * 100000) /
+          Number(inputMaterialsPpm) /
+          100000);
 
     this.commonService.onNotifySharedDataChanged_originalVolume(
       String(originalVolume)
