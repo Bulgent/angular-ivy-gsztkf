@@ -1,8 +1,8 @@
 <div class="box">
   <h2>After Dilution</h2>
-  <div class="flatArrangement">
-    <div class="smallboxL">
-      <div class="boldFont">What you want to make</div>
+  <div class="smallboxL">
+    <div class="boldFont">What you want to make</div>
+    <div class="flatArrangement_big">
       <div class="flatArrangement_small">
         <input
           type="number"
@@ -20,19 +20,21 @@
         <div>mL</div>
       </div>
     </div>
-    <div class="text-divider"></div>
-    <div class="smallboxR">
-      <div class="boldFont">Ingredients</div>
-      <div class="answer">
-        <div class="boldFont">Water</div>
-
-        <div>{{ waterVolume }}mL</div>
-      </div>
-      <div class="answer">
-        <div class="boldFont">Original Material{{ originalMaterialsPpm }}</div>
-
-        <div>{{ originalVolume }}mL</div>
-      </div>
+  </div>
+  <div class="smallboxR">
+    <div class="boldFont">Ingredients</div>
+    <div class="answer">
+      <div class="boldFont">Water</div>
+      <div>{{ waterVolume }} mL</div>
+    </div>
+    <div class="answer">
+      <div class="boldFont">Original Material</div>
+      <div>{{ originalVolume }} mL</div>
+    </div>
+    <div class="centerArrangement">
+      <button type="button" id="diluteButton" (click)="calculate()">
+        Dilute!!
+      </button>
     </div>
   </div>
 </div>

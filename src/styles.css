@@ -3,4 +3,5 @@ body {
   color: whitesmoke;
   background-color: hsl(189, 26%, 15%);
   flex: auto;
+  font-size: 35px;
 }

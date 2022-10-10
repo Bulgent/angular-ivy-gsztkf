@@ -57,4 +57,35 @@ export class OutputMaterials implements OnInit, OnDestroy {
       this.outputMaterialsVolume
     );
   }
+
+  calculate() {
+    let inputMaterialsPpm = this.commonService.getValue_inputMaterialsPpm();
+    let outputMaterialsPpm = this.commonService.getValue_outputMaterialsPpm();
+    let outputMaterialsVolume =
+      this.commonService.getValue_outputMaterialsVolume();
+    let waterVolume: Number;
+    let originalVolume: Number;
+
+    originalVolume =
+      ((Number(outputMaterialsPpm) * 100000) /
+        Number(inputMaterialsPpm) /
+        100000) *
+      Number(outputMaterialsVolume);
+    waterVolume =
+      Number(outputMaterialsVolume) *
+      (1 -
+        (Number(outputMaterialsPpm) * 100000) /
+          Number(inputMaterialsPpm) /
+          100000);
+
+    this.commonService.onNotifySharedDataChanged_originalVolume(
+      String(originalVolume)
+    );
+
+    this.commonService.onNotifySharedDataChanged_waterVolume(
+      String(waterVolume)
+    );
+
+    console.log('calculate');
+  }
 }

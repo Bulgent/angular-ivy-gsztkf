@@ -9,15 +9,15 @@
   color: black;
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
-
-.flatArrangement {
-  display: flex;
-  justify-content: space-between;
 }
 
 .flatArrangement_small {
+  display: flex;
+  align-items: flex-end;
+  width: 25vw;
+}
+
+.flatArrangement_big {
   display: flex;
   align-items: flex-end;
 }
@@ -28,13 +28,13 @@
 }
 
 #outputMaterialsPpm {
-  width: 10vw;
+  width: 15vw;
   height: 8vw;
   font-size: larger;
 }
 
 #outputMaterialsVolume {
-  width: 10vw;
+  width: 15vw;
   height: 8vw;
   font-size: larger;
 }
@@ -54,7 +54,6 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  width: 30vw;
 }
 
 .smallboxR {
@@ -62,9 +61,27 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  width: 40vw;
+  margin-top: 5vw;
 }
 
 .boldFont {
   font-weight: bold;
+}
+
+#diluteButton {
+  width: 50vw;
+  height: 20vw;
+  font-size: 3rem;
+  font-weight: bold;
+  border-radius: 5%;
+  text-align: center;
+  margin-top: 5vw;
+  background-color: #dff68f;
+  color: #586e58;
+  border-color: #586e58;
+}
+
+.centerArrangement {
+  width: 100%;
+  text-align: center;
 }

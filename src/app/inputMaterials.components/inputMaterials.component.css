@@ -4,7 +4,7 @@
 }
 
 #inputMaterialsPpm {
-  width: 10vmin;
+  width: 15vmin;
   height: 8vmin;
   font-size: larger;
 }
@@ -16,6 +16,6 @@
   padding-bottom: 7vmin;
   padding-top: 0.5vmin;
   border-radius: 3%;
-  width: 40vw;
+  width: 60vw;
   color: black;
 }
