@@ -67,10 +67,10 @@ export class OutputMaterials implements OnInit, OnDestroy {
     let originalVolume: Number;
 
     originalVolume =
-      ((Number(outputMaterialsPpm) * 100000) /
-        Number(inputMaterialsPpm) /
-        100000) *
-      Number(outputMaterialsVolume);
+      (((Number(outputMaterialsPpm) * 100000) / Number(inputMaterialsPpm)) *
+        Number(outputMaterialsVolume)) /
+      100000;
+
     waterVolume =
       Number(outputMaterialsVolume) *
       (1 -
